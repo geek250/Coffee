@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-white" id="sidebar-wrapper">
+            <img src="./images/logo-me.png" width="150" height="150">
+            <div class="sidebar-heading text-center py-7 primary-text fs-7 fw-bold text-uppercase border-bottom">RP-Coffee shop</div>
+            <div class="list-group list-group-flush my-7">
+                <a href="dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                        class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+                <a href="request.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-shopping-cart me-2"></i>Delivery Ordered</a>
+                <a href="menu.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-gift me-2"></i>Manage Menu</a>
+                <a href="notification.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-comment-dots me-2"></i>Notification</a>
+                <a href="index.html" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
+                        class="fas fa-power-off me-2"></i>Logout</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="d-flex align-items-center">
+                    <h2 class="fs-2 m-0" style="color: white;">Menu</h2>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown" style="color: white;">
+                            <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user me-2" style="color: white;">Prince Honore</i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#" style="color: #000">Profile</a></li>
+                                <li><a class="dropdown-item" href="#" style="color: #000">Settings</a></li>
+                                <li><a class="dropdown-item" href="index.html" style="color: #000">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+            <hr style="color: white;">
+            <!DOCTYPE html>
+            <html lang="en">
+
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>Get Notification</title>
+                <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+                <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
+                <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen">
+                <link rel="stylesheet" href="css/lobipanel/lobipanel.min.css" media="screen">
+                <link rel="stylesheet" href="css/prism/prism.css" media="screen">
+                <!-- USED FOR DEMO HELP - YOU CAN REMOVE IT -->
+                <link rel="stylesheet" type="text/css" href="js/DataTables/datatables.min.css" />
+                <link rel="stylesheet" href="css/main.css" media="screen">
+                <script src="js/modernizr/modernizr.min.js"></script>
+                <style>
+                    .errorWrap {
+                        padding: 10px;
+                        margin: 0 0 20px 0;
+                        background: #fff;
+                        border-left: 4px solid #dd3d36;
+                        -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+                        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+                    }
+                    
+                    .succWrap {
+                        padding: 10px;
+                        margin: 0 0 20px 0;
+                        background: #fff;
+                        border-left: 4px solid #5cb85c;
+                        -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+                        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+                    }
+                </style>
+                <style>
+                    body {
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                    /* Full-width input fields */
+                    
+                    input[type=text],
+                    input[type=password],
+                    input[type=file],
+                    input[type=number] {
+                        width: 100%;
+                        padding: 12px 20px;
+                        margin: 8px 0;
+                        display: inline-block;
+                        border: 1px solid #ccc;
+                        box-sizing: border-box;
+                    }
+                    /* Set a style for all buttons */
+                    
+                    button {
+                        background-color: #aa6204;
+                        color: white;
+                        padding: 14px 20px;
+                        margin: 8px 0;
+                        border: none;
+                        cursor: pointer;
+                        width: 10%;
+                    }
+                    
+                    button:hover {
+                        opacity: 0.8;
+                    }
+                    /* Extra styles for the cancel button */
+                    
+                    .cancelbtn {
+                        width: auto;
+                        padding: 10px 18px;
+                        background-color: #8d0a01;
+                    }
+                    /* Center the image and position the close button */
+                    
+                    .imgcontainer {
+                        text-align: center;
+                        margin: 24px 0 12px 0;
+                        position: relative;
+                    }
+                    
+                    img.avatar {
+                        width: 40%;
+                        border-radius: 50%;
+                    }
+                    
+                    .container {
+                        padding: 16px;
+                    }
+                    
+                    span.psw {
+                        float: right;
+                        padding-top: 16px;
+                    }
+                    /* The Modal (background) */
+                    
+                    .modal {
+                        display: none;
+                        /* Hidden by default */
+                        position: fixed;
+                        /* Stay in place */
+                        z-index: 1;
+                        /* Sit on top */
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        /* Full width */
+                        height: 100%;
+                        /* Full height */
+                        overflow: auto;
+                        /* Enable scroll if needed */
+                        background-color: rgb(0, 0, 0);
+                        /* Fallback color */
+                        background-color: rgba(0, 0, 0, 0.4);
+                        /* Black w/ opacity */
+                        padding-top: 60px;
+                    }
+                    /* Modal Content/Box */
+                    
+                    .modal-content {
+                        background-color: #fefefe;
+                        margin: 5% auto 15% auto;
+                        /* 5% from the top, 15% from the bottom and centered */
+                        border: 1px solid #888;
+                        width: 80%;
+                        /* Could be more or less, depending on screen size */
+                    }
+                    /* The Close Button (x) */
+                    
+                    .close {
+                        position: absolute;
+                        right: 25px;
+                        top: 0;
+                        color: #000;
+                        font-size: 35px;
+                        font-weight: bold;
+                    }
+                    
+                    .close:hover,
+                    .close:focus {
+                        color: red;
+                        cursor: pointer;
+                    }
+                    /* Add Zoom Animation */
+                    
+                    .animate {
+                        -webkit-animation: animatezoom 0.6s;
+                        animation: animatezoom 0.6s
+                    }
+                    
+                    @-webkit-keyframes animatezoom {
+                        from {
+                            -webkit-transform: scale(0)
+                        }
+                        to {
+                            -webkit-transform: scale(1)
+                        }
+                    }
+                    
+                    @keyframes animatezoom {
+                        from {
+                            transform: scale(0)
+                        }
+                        to {
+                            transform: scale(1)
+                        }
+                    }
+                    /* Change styles for span and cancel button on extra small screens */
+                    
+                    @media screen and (max-width: 300px) {
+                        span.psw {
+                            display: block;
+                            float: none;
+                        }
+                        .cancelbtn {
+                            width: 100%;
+                        }
+                    }
+                </style>
+            </head>
+
+            <!-- ========== WRAPPER FOR BOTH SIDEBARS & MAIN CONTENT ========== -->
+
+            <section class="section">
+                <div class="container-fluid">
+
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="panel">
+                                <div class="panel-heading">
+
+
+                                    <div class="panel-body p-20">
+                                        <button style="float: left; border: none; background-color: #634a06; color: white; border-radius: .2rem;" onclick="document.getElementById('id01').style.display='block'">Add</button>
+
+                                        <div id="id01" class="modal">
+
+                                            <form class="modal-content animate" action="" method="post">
+                                                <div class="imgcontainer">
+                                                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                                                </div>
+
+                                                <div class="container">
+                                                    <label for="uname"><b>Names</b></label>
+                                                    <input type="text" placeholder="Enter names" name="uname" required>
+                                                    <label for="uname"><b>Upload image</b></label>
+                                                    <input type="file" placeholder="Enter names" name="uname" required>
+                                                    <label for="uname"><b>Real Dollar</b></label>
+                                                    <input type="number" placeholder="Real dollar" name="uname" required>
+                                                    <label for="number"><b>Deleted Dollar</b></label>
+                                                    <input type="text" placeholder="Enter names" name="uname" required>
+
+
+                                                    <button type="submit">Add</button>
+
+                                                </div>
+
+                                                <div class="container" style="background-color:#f1f1f1">
+                                                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Names</th>
+                                                    <th>Image</th>
+                                                    <th>Dollar</th>
+                                                    <th>Dollar removed</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+
+                                                <tr>
+                                                    <td>
+                                                        1
+                                                    </td>
+                                                    <td>
+                                                        Prince honore
+                                                    </td>
+                                                    <td>
+                                                        <img src="./images/logo.png" alt="" width="50" height="50">
+                                                    </td>
+                                                    <td>
+                                                        7
+                                                    </td>
+                                                    <td>
+                                                        <del>9</del>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><i class="fas fa-refresh" style="color: red;" title="Edit Record"></i> </a>
+                                                        <a href="#"><i class="fas fa-trash" style="color: red;" title="Edit Record"></i> </a>
+                                                    </td>
+
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td>
+                                                        2
+                                                    </td>
+                                                    <td>
+                                                        Prince honore
+                                                    </td>
+                                                    <td>
+                                                        <img src="./images/logo.png" alt="" width="50" height="50">
+                                                    </td>
+                                                    <td>
+                                                        7
+                                                    </td>
+                                                    <td>
+                                                        <del>9</del>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><i class="fas fa-refresh" style="color: red;" title="Edit Record"></i> </a>
+                                                        <a href="#"><i class="fas fa-trash" style="color: red;" title="Edit Record"></i> </a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        3
+                                                    </td>
+                                                    <td>
+                                                        Prince honore
+                                                    </td>
+                                                    <td>
+                                                        <img src="./images/logo.png" alt="" width="50" height="50">
+                                                    </td>
+                                                    <td>
+                                                        7
+                                                    </td>
+                                                    <td>
+                                                        <del>9</del>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><i class="fas fa-refresh" style="color: red;" title="Edit Record"></i> </a>
+                                                        <a href="#"><i class="fas fa-trash" style="color: red;" title="Edit Record"></i> </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        4
+                                                    </td>
+                                                    <td>
+                                                        Prince honore
+                                                    </td>
+                                                    <td>
+                                                        <img src="./images/logo.png" alt="" width="50" height="50">
+                                                    </td>
+                                                    <td>
+                                                        2
+                                                    </td>
+                                                    <td>
+                                                        <del>9</del>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><i class="fas fa-refresh" style="color: red;" title="Edit Record"></i> </a>
+                                                        <a href="#"><i class="fas fa-trash" style="color: red;" title="Edit Record"></i> </a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        5
+                                                    </td>
+                                                    <td>
+                                                        Prince honore
+                                                    </td>
+                                                    <td>
+                                                        <img src="./images/logo.png" alt="" width="50" height="50">
+                                                    </td>
+                                                    <td>
+                                                        7
+                                                    </td>
+                                                    <td>
+                                                        <del>34</del>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><i class="fas fa-refresh" style="color: red;" title="Edit Record"></i> </a>
+                                                        <a href="#"><i class="fas fa-trash" style="color: red;" title="Edit Record"></i> </a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        6
+                                                    </td>
+                                                    <td>
+                                                        Prince honore
+                                                    </td>
+                                                    <td>
+                                                        <img src="./images/logo.png" alt="" width="50" height="50">
+                                                    </td>
+                                                    <td>
+                                                        7
+                                                    </td>
+                                                    <td>
+                                                        <del>45</del>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><i class="fas fa-refresh" style="color: red;" title="Edit Record"></i> </a>
+                                                        <a href="#"><i class="fas fa-trash" style="color: red;" title="Edit Record"></i> </a>
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+
+
+                                        </table>
+
+                                        <button style="float: right; border: none; background-color: #835f3e; color: white; border-radius: .2rem;">Next</button>
+                                        <!-- /.col-md-12 -->
+                                    </div>
+
+
+                                    <!-- ========== COMMON JS FILES ========== -->
+                                    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+                                    <script src="js/bootstrap/bootstrap.min.js"></script>
+                                    <script src="js/pace/pace.min.js"></script>
+                                    <script src="js/lobipanel/lobipanel.min.js"></script>
+                                    <script src="js/iscroll/iscroll.js"></script>
+
+                                    <!-- ========== PAGE JS FILES ========== -->
+                                    <script src="js/prism/prism.js"></script>
+                                    <script src="js/DataTables/datatables.min.js"></script>
+
+                                    <!-- ========== THEME JS ========== -->
+                                    <script src="js/main.js"></script>
+
+                                    <script>
+                                        // Get the modal
+                                        var modal = document.getElementById('id01');
+
+                                        // When the user clicks anywhere outside of the modal, close it
+                                        window.onclick = function(event) {
+                                            if (event.target == modal) {
+                                                modal.style.display = "none";
+                                            }
+                                        }
+                                    </script>
+                                    <script>
+                                        $(function($) {
+                                            $('#example').DataTable();
+
+                                            $('#example2').DataTable({
+                                                "scrollY": "300px",
+                                                "scrollCollapse": true,
+                                                "paging": false
+                                            });
+
+                                            $('#example3').DataTable();
+                                        });
+                                    </script>
+</body>
+
+</html>
+<!-- /#page-content-wrapper -->
+</div>
+
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js "></script>
+<script>
+    var el = document.getElementById("wrapper ");
+    var toggleButton = document.getElementById("menu-toggle ");
+
+    toggleButton.onclick = function() {
+        el.classList.toggle("toggled ");
+    };
+</script>
+</body>
+
+</html>

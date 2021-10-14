@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rp-coffee shop </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container .form-1 {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            width: 40%;
+            height: 60vh;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3);
+        }
+        
+        .form-1 h1 {
+            text-align: center;
+            margin-top: 0.7rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        input[type="email"],
+        input[type="password"] {
+            border: none;
+            outline: none;
+            border-bottom: 1px solid;
+            background: none;
+            margin: 0.9rem 2rem;
+            font-size: 2rem;
+        }
+        
+        label {
+            margin: 0 2rem;
+            font-size: 22px;
+        }
+        
+        span {
+            margin: 0 2rem;
+            color: blue;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        
+        button {
+            margin: 2rem;
+            margin-bottom: 1.5rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            border: none;
+            font-size: 3rem;
+            font-weight: bolder;
+            height: 5rem;
+            color: #fff;
+            background-color: #755519;
+        }
+        /* ........///Sign-Up///......... */
+        
+        p {
+            text-align: center;
+            font-weight: bolder;
+        }
+        
+        .icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            margin-top: 0.5rem;
+        }
+        
+        .icons a {
+            text-decoration: none;
+            font-size: 1rem;
+            margin: 0.2rem;
+        }
+        
+        .icons .fa-facebook-f {
+            border-radius: 50%;
+            background: #5d75ab;
+            color: #fff;
+            padding: 1rem;
+        }
+        
+        button>a {
+            color: white;
+        }
+        
+        .icons .fa-twitter {
+            border-radius: 50%;
+            background: #1da1f2;
+            color: white;
+            padding: 1rem;
+        }
+        
+        .icons .fa-google {
+            border-radius: 50%;
+            background: #ee5645;
+            color: #fff;
+            padding: 1rem;
+        }
+        /* ....///Media query///..... */
+        
+        @media (max-width: 501px) {
+            html {
+                font-size: 15px;
+            }
+            .container .form-1 {
+                width: 300px;
+            }
+        }
+        
+        @media (min-width: 501px) and (max-width: 768px) {
+            html {
+                font-size: 14px;
+            }
+            .container .form-1 {
+                width: 450px;
+            }
+        }
+        
+        @media (min-width: 765px) and (max-width: 1200px) {
+            html {
+                font-size: 18px;
+            }
+            .container .form-1 {
+                width: 540px;
+                height: 550px;
+            }
+        }
+        
+        @media (orientation: landscape) and (max-height: 500px) {
+            .container {
+                height: 100vmax;
+            }
+        }
+    </style>
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <img src="images/logo-me.png" alt="">
+        </a>
+    </header>
+    <div class="row">
+        <div class="login">
+
+            <div class="container">
+                <form class="form-1">
+                    <h1>Admin Sign-Up</h1>
+                    <label for="email">Username</label>
+                    <input type="email" name="text" id="email" />
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" />
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" />
+                    <label for="password">Re-type Password</label>
+                    <input type="password" name="password" id="password" />
+                    <button><a href="login.html">Sign-up</a></button>
+                    <span "><a href="login.html " style="color: green; ">Back to login</a> </span>
+
+
+
+
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- custom js file link  -->
+    <script src="js/script.js "></script>
+
+</body>
+
+</html>
